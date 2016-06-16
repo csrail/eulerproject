@@ -13,12 +13,12 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 #Output
 # Summation
-
+timer_start = Time.now
 
 threshold = 1000
 summation = 0
 
-(1..(threshold - 1).each do |number|
+(1..(threshold - 1)).each do |number|
 	if number%3 == 0
 		summation += number
 	elsif number%5 == 0
@@ -27,6 +27,8 @@ summation = 0
 end
 
 p summation
+
+puts "Elapsed Time: #{(Time.now - timer_start)*1000} milliseconds"
 
 #To Do:
 =begin
